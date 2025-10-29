@@ -12,18 +12,18 @@ class Enzyme < Formula
   depends_on arch: :arm64
 
   def install
-    # The tarball extracts to enzyme-coreml/ directory
+    # The tarball extracts to the root, install directly to libexec
     libexec.install Dir["*"]
 
     # Create wrapper scripts that call the binaries
     (bin/"enzyme").write <<~EOS
       #!/bin/bash
-      exec "#{libexec}/enzyme-coreml/enzyme" "$@"
+      exec "#{libexec}/enzyme" "$@"
     EOS
 
     (bin/"enzyme-mcp").write <<~EOS
       #!/bin/bash
-      exec "#{libexec}/enzyme-coreml/enzyme-mcp" "$@"
+      exec "#{libexec}/enzyme-mcp" "$@"
     EOS
 
     chmod 0755, bin/"enzyme"
