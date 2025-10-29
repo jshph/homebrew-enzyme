@@ -4,7 +4,7 @@ class Enzyme < Formula
   # Download from Railway server (private GitHub repo)
   url "https://enzyme-server-production.up.railway.app/site/download-enzyme?platform=mac-arm64"
   sha256 "de428d1ea857acd28b861c5beb50e41eb905d9fe4b37df74da206f87c61dd7f6"
-  version "0.15.8"
+  version "0.15.9"
   license "MIT"
 
   # Only supports macOS ARM64 for now
