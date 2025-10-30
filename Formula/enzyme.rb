@@ -3,8 +3,8 @@ class Enzyme < Formula
   homepage "https://github.com/jshph/enzyme-python"
   # Download from Railway server (private GitHub repo)
   url "https://enzyme-server-production.up.railway.app/site/download-enzyme?platform=mac-arm64"
-  sha256 "de428d1ea857acd28b861c5beb50e41eb905d9fe4b37df74da206f87c61dd7f6"
-  version "0.15.9"
+  sha256 "bf97cac0e59bcb5941e1d5620482233eab467d1d5b97d82a8482fff371e1b26c"
+  version "0.16.0"
   license "MIT"
 
   # Only supports macOS ARM64 for now
