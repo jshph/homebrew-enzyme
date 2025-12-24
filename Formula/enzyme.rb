@@ -1,17 +1,21 @@
 class Enzyme < Formula
   desc "AI-powered knowledge management for markdown vaults (Obsidian, Logseq)"
   homepage "https://github.com/jshph/enzyme-python"
-  version "0.21.3"
+  version "0.21.4"
   license "MIT"
 
   # Download from Railway proxy server (enzyme-python repo is private)
   # Version parameter ensures we always get the exact version matching the SHA256
   url "https://enzyme-server-production.up.railway.app/site/download-enzyme?platform=mac-arm64&version=#{version}"
-  sha256 "af35ec313aec22fbb6c2bffc178b7f2ed193dfd188441d5ecd8d98a081c04d77"
+  sha256 "5e1231aca9251296fc0e1aee6d71cdc0d145e49e53099dbde5f433aa605d7812"
 
   # Only supports macOS ARM64 for now
   depends_on :macos
   depends_on arch: :arm64
+
+  # Note: Homebrew may show "Failed to fix install linkage" warnings during install.
+  # This is expected with PyInstaller-bundled binaries and can be safely ignored.
+  # The binaries work correctly - they use @rpath which doesn't need rewriting.
 
   def install
     # The tarball extracts to the root, install directly to libexec
@@ -34,7 +38,12 @@ class Enzyme < Formula
 
   def caveats
     <<~EOS
-      🧬 Enzyme installed! Next steps:
+      🧬 Enzyme installed successfully!
+
+      Note: You may have seen "Failed to fix install linkage" warnings above.
+      These can be safely ignored - the binaries work correctly.
+
+      Next steps:
 
       1. Configure MCP for Claude Code:
          claude mcp add enzyme --scope user enzyme-mcp
