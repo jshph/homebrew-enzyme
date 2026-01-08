@@ -45,21 +45,14 @@ class Enzyme < Formula
 
       Next steps:
 
-      1. Configure MCP for Claude Code:
+      1. Initialize your vault:
+         cd /path/to/your/vault
+         enzyme init
+
+      2. Configure MCP for Claude Code:
          claude mcp add enzyme --scope user enzyme-mcp
 
-      2. Configure MCP for Codex (optional):
-         Add to ~/.codex/config.toml:
-
-         [mcp_servers.enzyme]
-         command = "#{HOMEBREW_PREFIX}/bin/enzyme-mcp"
-         args = []
-
-      3. Launch Claude Code with Enzyme:
-         cd /path/to/your/vault
-         claude "/enzyme:enzyme (MCP)"
-
-      📚 Documentation: https://github.com/jshph/enzyme-python
+      📚 Full setup guide: https://enzyme.garden/setup
     EOS
   end
 
