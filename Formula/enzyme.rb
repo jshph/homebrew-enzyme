@@ -1,13 +1,13 @@
 class Enzyme < Formula
   desc "AI-powered knowledge management for markdown vaults (Obsidian, Logseq)"
   homepage "https://github.com/jshph/enzyme-python"
-  version "0.25.5"
+  version "0.25.6"
   license "MIT"
 
   # Download from Railway proxy server (enzyme-python repo is private)
   # Version parameter ensures we always get the exact version matching the SHA256
   url "https://enzyme-server-production.up.railway.app/site/download-enzyme?platform=mac-arm64&version=#{version}"
-  sha256 "eab8fbf30512b308368ef51fc1caf0c0d53dd74725fc94113d7f7ec3f998eac7"
+  sha256 "d0a2b761107bf0a66178244c9950b3bb71b78c563df48867a5cde127723cc554"
 
   # Only supports macOS ARM64 for now
   depends_on :macos
