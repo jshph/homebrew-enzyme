@@ -14,17 +14,14 @@ class EnzymeCli < Formula
     bin.install "enzyme"
   end
 
-  def post_install
-    system "#{bin}/enzyme", "setup"
-  end
-
   def caveats
     <<~EOS
       Enzyme installed successfully!
 
-      The embedding model (~52 MB) was downloaded to ~/.enzyme/models/.
+      Download the embedding model (~52 MB):
+        enzyme setup
 
-      Next steps:
+      Then initialize your vault:
         cd /path/to/your/vault
         enzyme init
 
