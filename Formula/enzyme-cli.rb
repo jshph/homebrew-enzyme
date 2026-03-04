@@ -1,4 +1,4 @@
-class Enzyme < Formula
+class EnzymeCli < Formula
   desc "Local-first knowledge indexing for Obsidian vaults"
   homepage "https://github.com/jshph/enzyme"
   version "0.1.1"
