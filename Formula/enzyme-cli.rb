@@ -1,11 +1,11 @@
 class EnzymeCli < Formula
   desc "Local-first knowledge indexing for Obsidian vaults"
   homepage "https://github.com/jshph/enzyme"
-  version "0.2.5"
+  version "0.2.6"
   license "MIT"
 
   url "https://github.com/jshph/enzyme/releases/download/v#{version}/enzyme-macos-arm64.tar.gz"
-  sha256 "9736f37236889865e4cd23f5589a0ebdfacf1973793097940fc41b8ca53da689"
+  sha256 "e520e26179448a9157f9c70ddd1973fbb23fb9dd059af2fdf483161afa52c1ba"
 
   depends_on :macos
   depends_on arch: :arm64
@@ -18,7 +18,7 @@ class EnzymeCli < Formula
     <<~EOS
       Enzyme installed successfully!
 
-      Download the embedding model (~52 MB):
+      Download the embedding model (~23 MB):
         enzyme setup
 
       Then initialize your vault:
