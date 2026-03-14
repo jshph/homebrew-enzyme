@@ -5,7 +5,7 @@ class EnzymeCli < Formula
   license "MIT"
 
   url "https://github.com/jshph/enzyme/releases/download/v#{version}/enzyme-macos-arm64.tar.gz"
-  sha256 "1ba9d5885efb9ed2af80599ca98bcc1cd692b56f4997173c9f65b22b32289398"
+  sha256 "34fb6783d0b74566b4b05753174a04a6fa100081b6197a52847237ba0dc32a23"
 
   depends_on :macos
   depends_on arch: :arm64
