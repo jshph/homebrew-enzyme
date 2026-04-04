@@ -1,11 +1,11 @@
 class EnzymeCli < Formula
   desc "Local-first knowledge indexing for Obsidian vaults"
   homepage "https://github.com/jshph/enzyme"
-  version "0.4.5"
+  version "0.4.6"
   license "MIT"
 
   url "https://github.com/jshph/enzyme/releases/download/v#{version}/enzyme-macos-arm64.tar.gz"
-  sha256 "eb56d3ad5727cd6cb64acc318c3a12716c00d27d0f4317f4d1d0d724d7accfba"
+  sha256 "a79da0fdcf76262fbc2d0b1ddb0ecbc23a025772c3edaba09bd3ab46420d5ff1"
 
   depends_on :macos
   depends_on arch: :arm64
