@@ -1,11 +1,11 @@
 class EnzymeCli < Formula
-  desc "Compiles your content into a concept graph"
+  desc "Local-first knowledge indexing for Obsidian vaults"
   homepage "https://github.com/jshph/enzyme"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   url "https://github.com/jshph/enzyme/releases/download/v#{version}/enzyme-macos-arm64.tar.gz"
-  sha256 "bbd18f51e97fbfae6969f574fdf8d8b102ec5095ec2850b8e896abe706ff417c"
+  sha256 "273cf59920bf0e21445bc880eaf34d039b349b31502b40cb1aa8cf2926c3c824"
 
   depends_on :macos
   depends_on arch: :arm64
@@ -18,11 +18,11 @@ class EnzymeCli < Formula
     <<~EOS
       Enzyme installed successfully!
 
-      Download the embedding model (~31 MB):
+      Download the embedding model (~23 MB):
         enzyme setup
 
-      Then compile your concept graph:
-        cd /path/to/your/content
+      Then initialize your vault:
+        cd /path/to/your/vault
         enzyme init
 
       Setup guide: https://enzyme.garden/setup
