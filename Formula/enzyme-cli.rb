@@ -1,17 +1,17 @@
 class EnzymeCli < Formula
   desc "Local-first knowledge indexing for Obsidian vaults"
   homepage "https://github.com/jshph/enzyme"
-  version "0.5.13"
+  version "0.5.14"
   license "MIT"
 
   depends_on :macos
 
   if Hardware::CPU.arm?
     url "https://github.com/jshph/enzyme/releases/download/v#{version}/enzyme-macos-arm64.tar.gz"
-    sha256 "ca050235707aaf67bc06be14edda26c208b9c4c9a6648a2ab1b4cac72b070688"
+    sha256 "7e3b899dc735d62501e85fbfb6567005cad874cf43213a6eb611009090db2659"
   else
     url "https://github.com/jshph/enzyme/releases/download/v#{version}/enzyme-macos-x86_64.tar.gz"
-    sha256 "e159a098528b90157478387a6ec7bf05bd8ff175f100eba4c47a9277c4163563"
+    sha256 "24af2d76f0b77a8b32a1a147dd6b9dcd7bdc05739c65d34dacc24135694f2952"
   end
 
   def install
@@ -22,9 +22,15 @@ class EnzymeCli < Formula
     <<~EOS
       Enzyme installed successfully!
 
-      Initialize your vault:
+      Install agent instructions from your vault:
         cd /path/to/your/vault
-        enzyme init
+        enzyme install codex      # Codex / Pi / generic .agents
+        enzyme install claude     # Claude Code
+        enzyme install hermes     # Hermes
+        enzyme install openclaw   # OpenClaw
+
+      Then ask your agent: Use Enzyme to inspect and initialize this vault.
+      Terminal-only setup: enzyme scan --write-config && enzyme init
 
       Setup guide: https://enzyme.garden/setup
     EOS
